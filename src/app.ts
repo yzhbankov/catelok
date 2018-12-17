@@ -3,6 +3,8 @@
 import bodyParser from "body-parser";
 import express from "express";
 
+import Login from "./routes/login/router";
+
 class App {
     public app: express.Application;
 
@@ -14,6 +16,8 @@ class App {
     private config(): void {
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({ extended: false }))
+
+        this.app.use('/login', new Login().router);
     }
 }
 
