@@ -1,8 +1,7 @@
 "use strict";
 
-import * as bodyParser from "body-parser";
-import * as express from "express";
-import * as path from "path";
+import bodyParser from "body-parser";
+import express from "express";
 
 class App {
     public app: express.Application;
